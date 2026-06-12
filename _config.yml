@@ -1,0 +1,26 @@
+title: Adaptive ANN System
+email: ""
+description: >-
+  Research notes and paper explainers for adaptive neural networks and architecture search.
+baseurl: "/adaptive-ann-system"
+url: "https://sameerresearchai.github.io"
+lang: en
+theme: minima
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  hard_wrap: false
+exclude:
+  - venv
+  - .venv
+  - env
+  - __pycache__
+  - node_modules
+  - Gemfile
+  - Gemfile.lock

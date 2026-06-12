@@ -20,3 +20,9 @@ Thumbs.db
 # PyTorch
 *.pth
 runs/
+
+# Jekyll / GitHub Pages
+_site/
+.jekyll-cache/
+.sass-cache/
+.jekyll-metadata

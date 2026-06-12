@@ -22,3 +22,26 @@ This mirrors principles found in biological neural systems—where synaptic conn
 Instead of asking "What architecture should I build?", this system asks: "What architecture can the network build for itself?"
 
 The network becomes both the learner and the architect—optimizing not just weights and biases, but its own structural form.
+
+## Paper Library
+
+This repository now includes a scalable `papers/` section for long-form explainers and research notes.
+
+- Library landing page: `papers/index.md`
+- DARTS explainer: `papers/darts/index.md`
+
+## GitHub Pages
+
+The repo is configured for GitHub Pages with Jekyll.
+
+### Enable deployment
+
+1. Go to repository **Settings** -> **Pages**.
+2. Under **Build and deployment**, select **GitHub Actions**.
+3. Push to `main` or `master` to trigger `.github/workflows/pages.yml`.
+
+After deployment, pages are available at:
+
+- Home: `/`
+- Paper library: `/papers/`
+- DARTS page: `/papers/darts/`
