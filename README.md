@@ -31,6 +31,12 @@ This repository now includes a scalable `papers/` section for long-form explaine
 - DARTS explainer: `papers/darts/index.md`
 - Input-Adaptive Hard-Exit DARTS: `papers/input-adaptive-early-exit-darts/index.md`
 
+## Notebooks
+
+Companion experimental notebooks are available under `notebooks/`.
+
+- Input-Adaptive Hard-Exit DARTS notebook: `notebooks/input_adaptive_hard_exit_darts.ipynb`
+
 ## GitHub Pages
 
 The repo is configured for GitHub Pages with Jekyll.
