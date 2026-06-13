@@ -18,8 +18,18 @@ The companion notebook (`notebooks/input_adaptive_hard_exit_darts.ipynb`) now in
 - A calibration summary (per-node stop-probability and confidence quantiles) and calibration-derived threshold candidates.
 - Expanded validation sweeps over `(tau_s, tau_c, conf_temp)` to better expose the accuracy-compute frontier.
 - New evaluation controls: `quick_eval_batches`, `sweep_eval_batches`, and `calib_eval_batches`.
+- Stronger intermediate exit heads plus auxiliary early-exit supervision during training.
 
 Practical workflow: after code-only evaluation changes, load the saved checkpoint and rerun evaluation/sweep cells without retraining.
+
+### Latest Measured Tradeoff (CIFAR-10, Jun 2026 run)
+
+- Soft baseline: `Val acc = 0.8668`, `Test acc = 0.8621`, `Test avg_cost = 0.8261`.
+- Hard quick baseline (default thresholds): `Test acc = 0.8531`, `avg_cost_norm = 0.8399`.
+- Best balanced validation sweep point: `conf_temp = 0.7`, `tau_s = 0.05`, `tau_c = 0.75`.
+- Test at best balanced point: `acc = 0.8545`, `avg_cost_norm = 0.7723`, exits `~91.1%` at node 3 and `~8.9%` at node 4.
+
+This run demonstrates a meaningful compute reduction versus near-full-depth behavior while keeping test accuracy close to the soft baseline.
 
 Consider a supervised learning problem with input samples `x in X` and labels `y in Y`. Let:
 
