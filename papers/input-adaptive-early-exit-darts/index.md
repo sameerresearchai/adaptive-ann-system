@@ -9,6 +9,18 @@ description: "A corrected Input-Adaptive DARTS formulation with true hard early-
 
 > This document presents a full mathematical formulation of Input-Adaptive Early-Exit DARTS and clarifies the key correction required for **actual inference-time compute savings**.
 
+## Latest Notebook Update (Jun 2026)
+
+The companion notebook (`notebooks/input_adaptive_hard_exit_darts.ipynb`) now includes:
+
+- Updated mixed-precision APIs using `torch.amp.GradScaler(...)` and `torch.amp.autocast(...)` (no deprecated `torch.cuda.amp` warnings).
+- Hard-exit confidence temperature control (`conf_temp`) for better threshold behavior.
+- A calibration summary (per-node stop-probability and confidence quantiles) and calibration-derived threshold candidates.
+- Expanded validation sweeps over `(tau_s, tau_c, conf_temp)` to better expose the accuracy-compute frontier.
+- New evaluation controls: `quick_eval_batches`, `sweep_eval_batches`, and `calib_eval_batches`.
+
+Practical workflow: after code-only evaluation changes, load the saved checkpoint and rerun evaluation/sweep cells without retraining.
+
 Consider a supervised learning problem with input samples `x in X` and labels `y in Y`. Let:
 
 - `w` denote network weights,
