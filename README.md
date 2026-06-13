@@ -29,6 +29,7 @@ This repository now includes a scalable `papers/` section for long-form explaine
 
 - Library landing page: `papers/index.md`
 - DARTS explainer: `papers/darts/index.md`
+- Input-Adaptive Hard-Exit DARTS: `papers/input-adaptive-early-exit-darts/index.md`
 
 ## GitHub Pages
 
@@ -45,3 +46,4 @@ After deployment, pages are available at:
 - Home: `/`
 - Paper library: `/papers/`
 - DARTS page: `/papers/darts/`
+- Input-Adaptive Hard-Exit DARTS page: `/papers/input-adaptive-early-exit-darts/`

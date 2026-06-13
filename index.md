@@ -14,6 +14,7 @@ We maintain long-form explainers in the `papers/` section:
 
 - [Paper Library]({{ "/papers/" | relative_url }})
 - [DARTS: Differentiable Architecture Search]({{ "/papers/darts/" | relative_url }})
+- [Input-Adaptive Hard-Exit DARTS]({{ "/papers/input-adaptive-early-exit-darts/" | relative_url }})
 
 ## Code
 
