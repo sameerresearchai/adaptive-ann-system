@@ -22,6 +22,26 @@ The companion notebook (`notebooks/input_adaptive_hard_exit_darts.ipynb`) now in
 
 Practical workflow: after code-only evaluation changes, load the saved checkpoint and rerun evaluation/sweep cells without retraining.
 
+### Reproducibility Protocol (A1)
+
+Current runs use a locked protocol in the notebook:
+
+- Seed list: `(11, 22, 33)` with configurable `seed_index`
+- Fixed split seed: `2026`
+- Deterministic runtime mode enabled
+- Full package snapshot via `pip freeze`
+
+Each execution writes a run-scoped artifact directory under `runs/<run_id>/`, including:
+
+- `protocol.json`
+- `env_info.json`
+- `config.json`
+- `pip_freeze.txt`
+- `train_epoch_metrics.csv`
+- `summary.json`
+
+Run artifacts are intentionally kept local (or Colab Drive) and are not tracked in git by default.
+
 ### Latest Measured Tradeoff (CIFAR-10, Jun 2026 run)
 
 - Soft baseline: `Val acc = 0.8668`, `Test acc = 0.8621`, `Test avg_cost = 0.8261`.
